@@ -16,7 +16,7 @@ public class MaxPairwiseProduct {
         return max_product;
     }
 
-    static int getMaxPairwiseProductFast(int[] numbers) {
+    static long getMaxPairwiseProductFast(long[] numbers) {
 
         int n = numbers.length;
         int index1 = 0;
@@ -41,9 +41,9 @@ public class MaxPairwiseProduct {
     public static void main(String[] args) {
         FastScanner scanner = new FastScanner(System.in);
         int n = scanner.nextInt();
-        int[] numbers = new int[n];
+        long[] numbers = new long[n];
         for (int i = 0; i < n; i++) {
-            numbers[i] = scanner.nextInt();
+            numbers[i] = scanner.nextLong();
         }
         System.out.println(getMaxPairwiseProductFast(numbers));
     }

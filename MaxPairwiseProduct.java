@@ -19,23 +19,21 @@ public class MaxPairwiseProduct {
     static long getMaxPairwiseProductFast(long[] numbers) {
 
         int n = numbers.length;
-        int index1 = 0;
-        int index2 = 0;
 
-        for (int first = 1; first < n; ++first) {
-           if(numbers[first] > numbers[index1])
-           	index1 = first;
+        long max1 = 0;
+        long max2 = 0;
+
+        for (int first = 0; first < n; ++first) {
+           if(numbers[first] > max1){
+              max2 = max1;
+              max1 = numbers[first];
+           }
+           else if(numbers[first] > max2){
+              max2 = numbers[first];
+           }
         }
 
-        if (index1 == 0)
-        	index2 = 1;
-
-        for (int second = 1; second < n; ++second) {
-           if((numbers[second] > numbers[index2]) && (numbers[second] != numbers[index1]))
-           	index2 = second;
-        }
-
-        return numbers[index1]*numbers[index2];
+        return max1*max2;
     }
 
     public static void main(String[] args) {
@@ -43,7 +41,7 @@ public class MaxPairwiseProduct {
         int n = scanner.nextInt();
         long[] numbers = new long[n];
         for (int i = 0; i < n; i++) {
-            numbers[i] = scanner.nextLong();
+            numbers[i] = scanner.nextInt();
         }
         System.out.println(getMaxPairwiseProductFast(numbers));
     }

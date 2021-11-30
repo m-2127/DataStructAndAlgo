@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class FibonacciLastDigit {
-    private static int getFibonacciLastDigitNaive(int n) {
+    private static int getFibonacciLastDigit(int n) {
         if (n <= 1)
             return n;
 
@@ -22,7 +22,7 @@ public class FibonacciLastDigit {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        int c = getFibonacciLastDigitNaive(n);
+        int c = getFibonacciLastDigit(n);
         System.out.println(c);
     }
 }

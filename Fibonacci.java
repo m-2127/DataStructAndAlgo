@@ -3,9 +3,9 @@ import java.util.HashMap;
 
 public class Fibonacci {
 	
-  HashMap<Integer, Long> fibonacci = new HashMap<Integer, Long>();
+  private static HashMap<Integer, Long> fibonacci = new HashMap<Integer, Long>();
 	
-  long calc_fib(int n) {
+  private static long calc_fib(int n) {
     if (n <= 1){
       return n;
 	}
@@ -24,9 +24,7 @@ public class Fibonacci {
   public static void main(String args[]) {
     Scanner in = new Scanner(System.in);
     int n = in.nextInt();
-	
-	Fibonacci fb = new Fibonacci();
 
-    System.out.println(fb.calc_fib(n));
+    System.out.println(calc_fib(n));
   }
 }

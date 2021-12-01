@@ -25,22 +25,12 @@ public class FibonacciHuge {
             else{
 				if((list.get(list.size() - 2) == 0) && (list.get(list.size() - 1) == 1)){
 					divisorLength = list.size() -2;
-					//System.out.println();
 					return list.get((int)(n % divisorLength));
 				}
 				else{
 					list.add((list.get(list.size() - 2) + (list.get(list.size() - 1))) % m);
 				}
 			}
-			
-			/*if ( (i > 1) && (list.get(list.size() - 2) == 0) && (list.get(list.size() - 1) == 1)) {
-				System.out.println(i);
-				divisorLength = list.size() - 3;
-				break;
-			}
-			else if (i == (n - 2)){
-				return current % m;
-			}*/
         }
 		
 		return list.get(list.size() - 1);

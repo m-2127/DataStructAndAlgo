@@ -57,13 +57,13 @@ public class FibonacciPartialSum {
 					sum2 = sum;
 					sum *= (n/divisorLength);
 					
-					sum2 *= (s/divisorLength);
+					sum2 *= ((s-1)/divisorLength);
 					
 					for (int j = (int)(n % divisorLength) ; j >= 0; j--){
 						sum += list.get(j);
 					}
 					
-					for (int j = (int)(s % divisorLength) ; j >= 0; j--){
+					for (int j = (int)((s-1) % divisorLength) ; j >= 0; j--){
 						sum2 += list.get(j);
 					}
 					

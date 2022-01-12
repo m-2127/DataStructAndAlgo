@@ -11,7 +11,10 @@ long long binary_search(const vector<long long> &a, long long x) {
 		i =  (left + right) / 2;
 		
 		if(x == a[i]){
-			return i;
+		  if(x != a[i-1]){
+			return i;	
+		  }
+		  right = i - 1;
 		}
 		else if(x < a[i]){
 			right = i - 1;

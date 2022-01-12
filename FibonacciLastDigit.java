@@ -1,6 +1,10 @@
 import java.util.*;
 
 public class FibonacciLastDigit {
+	
+	System.out.println("Hi");
+	
+	
     private static int getFibonacciLastDigit(int n) {
         if (n <= 1)
             return n;
